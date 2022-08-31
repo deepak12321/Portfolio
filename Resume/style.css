@@ -1,0 +1,297 @@
+*{
+    margin:0;
+    font-family: roboto,sans-serif;
+}
+.header_para
+{
+    /* display:block; */
+    background-color: rgb(90, 163, 212);
+    height:150px;
+    display:flex;
+    
+    
+}
+.photo
+{
+    display:block;
+    position:absolute;
+    top:15px;
+    left:55px;
+    width:200px;
+    height:200px;
+    border-radius: 4px;
+    border:15px  rgb(55, 225, 151) solid;
+    margin:5px;
+    padding:0;
+
+}
+.name_info
+{
+    display:block;
+    margin:auto;
+    margin-top:50px;
+    text-align: center;
+    
+}
+.name
+{
+    color: white;
+    text-transform: uppercase;
+    padding: 10px;
+    margin-left: auto;
+    width:100%;
+    font-family:roboto,sans-serif;
+    font-weight: 700;
+    /* letter-spacing: 3px; */
+    font-size: 40px;
+    /* word-spacing: 5px; */
+}
+.title_info
+{
+    /* margin-top:3px; */
+    background-color: rgb(55, 225, 151);
+}
+.title_name
+{
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    font-size: 30px;
+    position: relative;
+    top:15px;
+    text-decoration: underline;
+}
+.title
+{
+    padding:2px;
+    text-transform: uppercase;
+    
+    margin:auto;
+    font-size: 25px;
+    font-weight: 500;
+    font-family: roboto,sans-serif;
+    text-align: center;
+    color: white;
+}
+.main_body
+{
+    box-sizing: border-box;
+}
+.left_section
+{
+    box-sizing: border-box;
+    float:left;
+    width:30%;
+    height:fit-content;
+    /* border-right: 2px solid black; */
+    background-color: rgba(171, 171, 171, 0.265);
+    padding-left: 6px;
+}
+.right_section
+{
+    box-sizing: border-box;
+    float:right;
+    width:70%;
+    height:fit-content;
+    transition: 0.6s;
+    /* background-color: rgb(129, 99, 199); */
+    padding-left: 20px;
+    
+    
+}
+.null
+{
+    height:80px;
+    width:100%;
+    /* background-color: #E9E9E9; */
+}
+.name_title
+{
+    visibility:hidden;
+    height: 0;
+    margin-bottom: 10px;
+}
+.secondary 
+{
+    position:relative;
+    text-decoration: underline;
+    text-transform: capitalize;
+    left:55px;
+}
+.about_section
+{
+    position:relative;
+    transition: 0.6s;
+    
+}
+.ab
+{
+    display:flex;
+}
+.aboutme_desc
+{
+    font-size:16px;
+    font-weight: 400;
+}
+.contact_section
+{
+    margin-top: 15px;
+}
+.cm{
+    display:flex;
+}
+.contact{
+    width:30px;
+    height: 30px;
+}
+.contact_list{
+    list-style: none;
+    padding:2px;
+}
+.cont
+{
+    display:flex;
+}
+.contact_text
+{
+    position:relative;
+    top:8px;
+    margin-left: 3px;
+}
+.skill_section
+{
+    margin-top: 15px;
+}
+.sk
+{
+    display:flex;
+}
+.education_title
+{
+    display: flex;
+}
+.education_text
+{
+    font-size: 35px;
+    font-weight:700;
+    position:relative;
+    top:15px;
+    text-decoration: underline;
+}
+.institution_name
+{
+    margin-top: 20px;
+}
+.project_title
+{
+    display:flex;  
+}
+.project_list
+{
+    font-weight: bold;
+}
+.explore_more
+{
+    text-decoration: none;
+    color: black;
+}
+.explore_more:hover
+{
+    color: rgb(226, 73, 73);
+}
+
+.experience_title
+{
+    margin-top: 6px;
+    display:flex;
+    
+}
+.experience
+{
+    font-weight: bold;
+}
+.hobby_section
+{
+    margin-top:10px;
+}
+.hobby_title
+{
+    display:flex;
+}
+.hobby_list
+{
+    list-style:none;
+}
+.hobby
+{
+    display:flex;
+}
+.hobby_name
+{
+    position:relative;
+    top:8px;
+    margin-left: 3px;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+    .right_section {
+        transition: 0.6s;
+      width: 100%;
+    }
+    .left_section{
+        width:100%;
+        transition: 0.6s;
+        background-color: white;
+    }
+    .name_title{
+        visibility: visible;
+        height:40px;
+        padding-bottom: 10px;
+    }
+    .name{
+        visibility: hidden;
+    }
+    .title
+    {
+        visibility: hidden;
+    }
+}
+
+@media screen  and ( max-width:1045px  ) and (min-width:600px) {
+.cont{
+    display:block;
+}
+.left_section{
+    transition: 0.6s;
+    width:50%
+}
+.right_section
+{
+    transition: 0.6s;
+    width: 50%;
+}
+.photo
+{
+    position:relative;
+}
+.name_title{
+    visibility: visible;
+    height:40px;
+    padding-bottom: 10px;
+    transition: 0.2ms;
+}
+.name{
+    visibility: hidden;
+}
+.title
+{
+    visibility: hidden;
+} 
+    
+} 
