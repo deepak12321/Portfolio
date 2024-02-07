@@ -5,11 +5,128 @@
   <meta harsetc="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <title>Contact Form</title>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init({
+        publicKey: "5Z-jlSvVRENAxZL91",
+      });
+    })();
+  </script>
 </head>
 
+<style>
+  .main-form-div {
+    margin-top: 30px;
+  }
+
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: auto;
+    padding: 20px;
+    background-color: #d4d4d4;
+    width: 70%;
+  }
+
+  p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  .form-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    padding-left: 10px;
+    width: 90%;
+    resize: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  .small-field {
+    height: 30px;
+
+  }
+
+  button {
+    margin: auto;
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: #4e4f4e;
+    transition: 0.2s ease-out;
+  }
+
+  button:hover {
+    cursor: pointer;
+  }
+
+  button:active {
+    transform: scale(0.9);
+    background-color: #686868;
+
+  }
+</style>
+
 <body>
-  <p>This feature comming soon in march update, till then stay tuned...</p>
+  <div class="main-form-div">
+    <div class="form-container">
+      <p>Query/Sugession Form</p>
+      <span>
+        <input class="form-input small-field" type="text" name="" id="from_name" placeholder="First Name">
+      </span>
+      <span>
+        <input class="form-input small-field" type="email" name="" id="email" placeholder="abc123@gmail.com">
+      </span>
+      <span>
+        <input class="form-input small-field" type="text" name="" id="subject" placeholder="Subject">
+      </span>
+      <span>
+        <textarea class="form-input" name="" id="message" cols="30" rows="10"
+          placeholder="Write your message...."></textarea>
+      </span>
+      <button onclick="sendMail()">Send</button>
+    </div>
+  </div>
+
+
+
+
+
+  <script type="text/javascript">
+
+    function sendMail() {
+      var params = {
+        from_name: document.getElementById("from_name").value,
+        subject: document.getElementById("subject").value,
+        email_id: document.getElementById("email").value,
+        message: document.getElementById("message").value
+
+      }
+      emailjs.send("service_2chc6vf", "template_tcwbz8f", params).then(function (res) {
+        alert("Message Sent Sucessfully!")
+      })
+    }
+
+
+
+  </script>
+
 </body>
 
 </html>
